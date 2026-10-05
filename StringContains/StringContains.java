@@ -3,8 +3,8 @@ public class StringContains {
 
         boolean check = false;
 
-        if (s == null) {
-            return null;
+        if (s == null || substring == null) {
+            return false;
         }
 
         // for 
