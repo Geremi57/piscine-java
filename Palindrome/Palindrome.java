@@ -2,6 +2,10 @@ public class Palindrome {
     public static boolean isPalindrome(String s) {
         boolean  isPalindrome = false;
 
+        if (s == null){
+            return false;
+        }
+
         String lowerS = s.toLowerCase();
 
         String pal = "";
