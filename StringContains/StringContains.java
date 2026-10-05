@@ -3,6 +3,10 @@ public class StringContains {
 
         boolean check = false;
 
+        if (s == null) {
+            return null;
+        }
+
         // for 
         if (s.contains(subString)) {
             check = true;
