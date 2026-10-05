@@ -3,7 +3,7 @@ public class StringContains {
 
         boolean check = false;
 
-        if (s == null || substring == null) {
+        if (s == null || subString == null) {
             return false;
         }
 
