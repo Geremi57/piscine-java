@@ -37,9 +37,9 @@ public class ComputeArray {
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 3 == 0) {
                 res[i] = array[i] * 5;
-            }else if (array[i] % 3 == 1) {
+            }else if (array[i] % 3 == 1 || array[i] % 3 == -1) {
                 res[i] = array[i] + 7;
-            }else if (array[i] % 3 == 2) {
+            }else if (array[i] % 3 == 2 || array[i] % 3 == -2) {
                 res[i] = array[i];
             }
         }
