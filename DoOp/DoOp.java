@@ -7,7 +7,7 @@ public class DoOp {
     //         }
     //   }
 
-      if (args.length < 3 || args == null) {
+      if (args.length != 3 || args == null) {
         return "Error";
       }
 
