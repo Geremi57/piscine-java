@@ -7,8 +7,8 @@ public class DoOp {
     //         }
     //   }
 
-      if (args.length == 0) {
-        return "it depend on the input.";
+      if (args.length < 3 || args == null) {
+        return "Error";
       }
 
       int first = Integer.parseInt(args[0]);
@@ -26,17 +26,18 @@ public class DoOp {
             }else if (sign == "*") {
                 value = first * second;
             }else if (sign == "/") {
-                if (first == 0 || second == 0) {
+                if (second == 0) {
                     return "Error";
                 }
                 value = first / second;
             }else if (sign == "%") {
-                if (first == 0 || second == 0) {
+                if (second == 0) {
                     return "Error";
                 }
                 value = first % second;
+            }else {
+                return "Error";
             }
-
 
             String res = String.valueOf(value);
             // System.out.println(value);
