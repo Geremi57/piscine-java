@@ -1,11 +1,11 @@
 public class DoOp {
     public static String operate(String[] args) {
-      for (String doop: args){
+    //   for (String doop: args){
 
-            if (doop == "0") {
-                return "Error";
-            }
-      }
+    //         if (doop == "0") {
+    //             return "Error";
+    //         }
+    //   }
 
       if (args.length == 0) {
         return "it depend on the input.";
@@ -26,8 +26,14 @@ public class DoOp {
             }else if (sign == "*") {
                 value = first * second;
             }else if (sign == "/") {
+                if (first == 0 || second == 0) {
+                    return "Error";
+                }
                 value = first / second;
             }else if (sign == "%") {
+                if (first == 0 || second == 0) {
+                    return "Error";
+                }
                 value = first % second;
             }
 
