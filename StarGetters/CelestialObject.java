@@ -20,22 +20,22 @@ public class CelestialObject {
         return this.name;
     }
 
-     public double setX(double newx) {
-        return this.X = newx;
+     public void setX(double newx) {
+        this.X = newx;
     }
 
-    public double setY(double newy) {
-        return this.Y = newy;
+    public void setY(double newy) {
+        this.Y = newy;
     }
 
 
 
-    public double setZ(double newz) {
-        return this.Z = newz;
+    public void setZ(double newz) {
+        this.Z = newz;
     }
 
-    public String setName(String newname) {
-        return this.name = newname;
+    public void setName(String newname) {
+        this.name = newname;
     }
 
 }
