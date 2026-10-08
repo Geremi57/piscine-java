@@ -5,7 +5,7 @@ public class CelestialObject {
     private double z;
     private String name;
        
-    public static final double KM_IN_ONE_AU = 150000000.0;
+    public static final double KM_IN_ONE_AU = 150000000;
 
     public CelestialObject() {
         this.x = 0.0;
@@ -62,11 +62,11 @@ public class CelestialObject {
 
         double round = Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
 
-        return Double.valueOf(String.format("%.13f",round));
+        // return Double.valueOf(String.format("%.13f",round));
 
 
 
-        // return Math.round(round);
+        return round;
 
     }
 
