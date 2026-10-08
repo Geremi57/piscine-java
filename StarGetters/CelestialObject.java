@@ -11,6 +11,13 @@ public class CelestialObject {
         this.name = "Soleil";
     }
 
+    public CelestialObject(String name, double x, double y, double z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.name = name;
+    }
+
     public double getX() {
         return this.x;
     }
@@ -34,8 +41,6 @@ public class CelestialObject {
     public void setY(double newy) {
         this.y = newy;
     }
-
-
 
     public void setZ(double newz) {
         this.z = newz;
