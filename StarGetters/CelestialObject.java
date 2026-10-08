@@ -1,19 +1,19 @@
 public class CelestialObject {
-    private double X;
-    private double Y;
-    private double Z;
+    private double x;
+    private double y;
+    private double z;
     private String name = "Soleil";
 
     public double getX() {
-        return this.X;
+        return this.x;
     }
 
     public double getY() {
-        return this.Y;
+        return this.y;
     }
 
     public double getZ() {
-        return this.Z;
+        return this.z;
     }
 
     public String getName() {
@@ -21,17 +21,17 @@ public class CelestialObject {
     }
 
      public void setX(double newx) {
-        this.X = newx;
+        this.x = newx;
     }
 
     public void setY(double newy) {
-        this.Y = newy;
+        this.y = newy;
     }
 
 
 
     public void setZ(double newz) {
-        this.Z = newz;
+        this.z = newz;
     }
 
     public void setName(String newname) {
