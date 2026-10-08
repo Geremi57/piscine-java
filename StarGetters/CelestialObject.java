@@ -1,8 +1,8 @@
 public class CelestialObject {
-    public double X;
-    public double Y;
-    public double Z;
-    public String name = "Soleil";
+    private double X;
+    private double Y;
+    private double Z;
+    private String name = "Soleil";
 
     public double getX() {
         return this.X;
