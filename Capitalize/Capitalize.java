@@ -10,23 +10,34 @@ public class Capitalize {
         BufferedReader reader = new BufferedReader(new FileReader(args[0]));
         BufferedWriter writer = new BufferedWriter(new FileWriter(args[1]));
 
-        String line;
+        int c;
+        boolean startOfWord = true;
+        boolean pendingSpace = false;
 
-        while ((line = reader.readLine()) != null) {
-            String[] words = line.trim().split("\\s+");
+        while ((c = reader.read()) != -1) {
+            char ch = (char) c;
 
-            for (int i = 0; i < words.length; i++) {
-                if (i > 0) {
+            if (Character.isWhitespace(ch)) {
+                if (ch == '\n') {
+                    writer.newLine();
+                    startOfWord = true;
+                    pendingSpace = false;
+                } else {
+                    pendingSpace = true;
+                }
+            } else {
+                if (pendingSpace) {
                     writer.write(" ");
+                    pendingSpace = false;
                 }
 
-                if (!words[i].isEmpty()) {
-                    writer.write(Character.toUpperCase(words[i].charAt(0)));
-                    writer.write(words[i].substring(1));
+                if (startOfWord) {
+                    writer.write(Character.toUpperCase(ch));
+                    startOfWord = false;
+                } else {
+                    writer.write(ch);
                 }
             }
-
-            writer.newLine();
         }
 
         reader.close();
