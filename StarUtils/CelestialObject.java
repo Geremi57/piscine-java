@@ -73,13 +73,16 @@ public class CelestialObject {
         return getDistanceBetween(obj1, obj2) * KM_IN_ONE_AU;
     }
 
-    public String toString() {
-        String result = "";
-
-        result = this.name + " is positioned at (" + this.x +"00" +", " + this.y+"00" +", " + this.z+"00"  + ")";
-
-        return result;
-    }
+    @Override
+public String toString() {
+    return String.format(
+        "%s is positioned at (%.3f, %.3f, %.3f)",
+        this.name,
+        this.x,
+        this.y,
+        this.z
+    );
+}
 
     @Override
 public boolean equals(Object object) {
