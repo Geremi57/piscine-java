@@ -62,7 +62,11 @@ public class CelestialObject {
 
         double round = Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
 
-        return round;
+        return Double.valueOf(String.format("%.13f",round));
+
+
+
+        // return Math.round(round);
 
     }
 
