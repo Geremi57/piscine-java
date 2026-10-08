@@ -7,24 +7,23 @@ public class Capitalize {
             return;
         }
 
-        BufferedReader reader = new BufferedReader(new FileReader(args[0]));
-        BufferedWriter writer = new BufferedWriter(new FileWriter(args[1]));
+        FileReader reader = new FileReader(args[0]);
+        FileWriter writer = new FileWriter(args[1]);
 
         int character;
-        boolean startOfWord = true;
+        boolean capitalizeNext = true;
 
         while ((character = reader.read()) != -1) {
             char c = (char) character;
 
-            if (Character.isWhitespace(c)) {
-                writer.write(c);
-                startOfWord = true;
+            if (capitalizeNext && Character.isLetter(c)) {
+                writer.write(Character.toUpperCase(c));
+                capitalizeNext = false;
             } else {
-                if (startOfWord) {
-                    writer.write(Character.toUpperCase(c));
-                    startOfWord = false;
-                } else {
-                    writer.write(c);
+                writer.write(c);
+
+                if (Character.isLetter(c)) {
+                    capitalizeNext = false;
                 }
             }
         }
