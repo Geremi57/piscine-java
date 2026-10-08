@@ -53,6 +53,26 @@ public class CelestialObject {
         this.name = newname;
     }
 
+      public static double getDistanceBetween(CelestialObject obj1, CelestialObject obj2) {
+
+        double dx = obj1.getX() - obj2.getX();
+        double dy = obj1.getY() - obj2.getY();
+        double dz = obj1.getZ() - obj2.getZ();
+
+        double round = Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
+
+        // return Double.valueOf(String.format("%.13f",round));
+
+
+
+        return round;
+
+    }
+
+    public static  double getDistanceBetweenInKm(CelestialObject obj1, CelestialObject obj2) {
+        return getDistanceBetween(obj1, obj2) * KM_IN_ONE_AU;
+    }
+
     public String toString() {
         String result = "";
 
