@@ -24,7 +24,6 @@ public class CelestialObject {
         this.name = name;
     }
 
-
     public double getX() {
         return this.x;
     }
@@ -79,6 +78,10 @@ public class CelestialObject {
 
     public static double getMagnitude() {
         return magnitude;
+    }
+
+    public static void setMagnitude(double magnitude) {
+        CelestialObject.magnitude = magnitude;
     }
 
     @Override
